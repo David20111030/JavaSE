@@ -1,0 +1,2 @@
+className=cn.itcast.c通过配置文件运行类中的方法.Student
+methodName=love

@@ -1,0 +1,59 @@
+Class类的方法：
+得到此元素上存在的所有公共的注解 ：
+	public Annotation[] getAnnotations();
+
+ 得到在该元素的指定类型的注解，返回这些注释，如果没有则返回 null。
+	public <A extends Annotation> A getAnnotation(Class<A> annotationClass);
+		参数：
+			annotationClass - 对应于注释类型的 Class 对象 
+		返回：
+		如果该元素的指定注释类型的注解存在于此对象上，则返回这些注释，否则返回
+		
+返回直接存在于此元素上的所有注解(包括私有的):		
+		public Annotation[] getDeclaredAnnotations();		
+		
+得到该类的类加载器：
+		public ClassLoader getClassLoader();
+		
+得到此对象所表示的类或接口实现的接口：
+		public Class<?>[] getInterfaces();	
+		
+得到 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称。		
+		public String getName();
+		
+ 获取此类的包:		
+		public Package getPackage();
+		
+ 返回源代码中给出的底层类的简称:
+ 		public String getSimpleName();		
+ 		
+返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class:		
+		public Class<? super T> getSuperclass();
+		
+判断该Class对象是否表示一个注解类型：
+		public boolean isAnnotation();		
+		
+		
+		
+		
+返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现		
+		public Type[] getGenericInterfaces()
+		返回此类所实现的接口的一个数组 
+		
+		
+返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type。
+		public Type getGenericSuperclass()
+返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type。
+
+
+判定指定的 Object 是否与此 Class 所表示的对象赋值兼容。
+		public boolean isInstance(Object obj);
+		参数：
+		obj - 要检查的对象 
+		返回：
+		如果 obj 是此类的实例，则返回 true
+		
+
+============================
+Type类：是 Java 编程语言中所有类型的公共高级接口。它们包括原始类型、参数化类型、数组类型、类型变量和基本类型。 
+		
